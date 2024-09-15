@@ -105,7 +105,9 @@ const Footer = () => {
       {/* Footer Bottom Section */}
       <hr className="my-6 border-gray-700" />
       <div className="flex flex-col gap-5 md:flex-row justify-between items-center">
-        <p className="text-sm">OCtech &copy; 2018 | All Rights Reserved.</p>
+        <p className="text-sm">
+          OCtech Made with ❤️ in India | Copyright © 2024,
+        </p>
         <div className="flex space-x-4">
           <a href="#facebook" className="text-gray-400 hover:text-gray-300">
             <FaFacebook size={25} />
