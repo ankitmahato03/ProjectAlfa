@@ -1,0 +1,34 @@
+{
+  "items": [
+    {
+      "title": "Consulting",
+      "description": "Get the right technology solutions for your business. Our expert consultants provide tailored advice and optimized results.",
+      "png": "/pngs/consulting-png.png"
+    },
+    {
+      "title": "Project Management",
+      "description": "Transform your project with our project management services. Expert solutions for efficient delivery and optimized results.",
+      "png": "/pngs/project-management.png"
+    },
+    {
+      "title": "Software Engineering",
+      "description": "Build software that solves your biggest business challenges. Our expert engineers will craft tailored solutions to help you succeed.",
+      "png": "/pngs/software-engineering.png"
+    },
+    {
+      "title": "Web Develoment",
+      "description": "Get the right technology solutions for your business. Our expert consultants provide tailored advice and optimized results.",
+      "png": "/pngs/world-wide-web.png"
+    },
+    {
+      "title": "CRM Development",
+      "description": "Transform your project with our project management services. Expert solutions for efficient delivery and optimized results.",
+      "png": "/pngs/crm.png"
+    },
+    {
+      "title": "Payment Sys Intregation ",
+      "description": "Build software that solves your biggest business challenges. Our expert engineers will craft tailored solutions to help you succeed.",
+      "png": "/pngs/cash-flow.png"
+    }
+  ]
+}

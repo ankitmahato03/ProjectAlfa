@@ -1,0 +1,34 @@
+{
+  "data": [
+    {
+      "title": "StockWay a blog website",
+      "description": "Empower your insights with StockWay, a platform for financial news and analysis. Stay ahead with the latest trends and expert advice.",
+      "image": "/pngs/blog.png"
+    },
+    {
+      "title": "CRM Management",
+      "description": "Revolutionize customer interactions with our CRM solutions. Enhance client relationships with customized strategies and seamless integration.",
+      "image": "https://images.pexels.com/photos/3183197/pexels-photo-3183197.jpeg"
+    },
+    {
+      "title": "SPOTZ",
+      "description": "Elevate your brand with SPOTZ, your go-to for digital marketing solutions. Optimize engagement and grow your audience with innovative tactics.",
+      "image": "https://images.pexels.com/photos/8516356/pexels-photo-8516356.jpeg"
+    },
+    {
+      "title": "Tourismus",
+      "description": "Discover the world with Tourismus, offering personalized travel planning and unique experiences tailored to your needs and preferences.",
+      "image": "https://images.pexels.com/photos/1181244/pexels-photo-1181244.jpeg"
+    },
+    {
+      "title": "Realestate",
+      "description": "Navigate the property market with our real estate expertise. We provide strategic advice and cutting-edge tools for successful transactions.",
+      "image": "/pngs/realestate.png"
+    },
+    {
+      "title": "Hospital Management System",
+      "description": "Streamline healthcare operations with our Hospital Management System, ensuring efficient workflows and superior patient care management.",
+      "image": "/pngs/DMS.jpeg"
+    }
+  ]
+}

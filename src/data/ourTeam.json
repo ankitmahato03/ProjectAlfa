@@ -1,0 +1,19 @@
+{
+  "ourTeams": [
+    {
+      "title": "Wendelin Steiner",
+      "description": "Wendelin's dedication to customer satisfaction and his extensive knowledge in IT solutions and web development make him an ideal project manager. He's always working to ensure success for both the team and clients.",
+      "image": "https://images.pexels.com/photos/3823495/pexels-photo-3823495.jpeg"
+    },
+    {
+      "title": "Florian Steiner",
+      "description": "Florian is a talented web developer with a passion for creating beautiful and functional websites. He's always looking for new ways to improve his skills and stay up-to-date with the latest technologies.",
+      "image": "https://images.pexels.com/photos/2380794/pexels-photo-2380794.jpeg"
+    },
+    {
+      "title": "Frederick Steiner",
+      "description": "Frederick is a creative designer with a keen eye for detail and a passion for creating visually stunning websites. He's always looking for new ways to push the boundaries of design and create unique user experiences.",
+      "image": "https://images.pexels.com/photos/3394657/pexels-photo-3394657.jpeg"
+    }
+  ]
+}
