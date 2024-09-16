@@ -33,7 +33,7 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`fixed top-4 left-1/2 transform -translate-x-1/2 w-full max-w-[1200px] bg-white bg-opacity-60 backdrop-blur-lg text-black transition-all duration-300 z-[50] ${
+      className={`fixed top-4 left-1/2 transform -translate-x-1/2 w-full max-w-[1200px] bg-white bg-opacity-60 backdrop-blur-md text-black transition-all duration-300 z-[50] ${
         shadow ? "shadow-lg" : ""
       } px-5 py-3 rounded-[20px]`} // Ensuring the Navbar is centered and not clipped
     >
