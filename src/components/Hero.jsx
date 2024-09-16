@@ -3,6 +3,9 @@ import React from "react";
 import { Carousel, CarouselContent, CarouselItem } from "./ui/carousel";
 import Image from "next/image";
 import Autoplay from "embla-carousel-autoplay";
+import { FaArrowDownLong } from "react-icons/fa6";
+import { Link } from "react-scroll";
+import { Button } from "./ui/moving-border";
 
 const data = [
   {
@@ -30,7 +33,7 @@ const Hero = () => {
         className="w-full"
         plugins={[
           Autoplay({
-            delay: 2000,
+            delay: 5000,
           }),
         ]}
       >
@@ -58,11 +61,21 @@ const Hero = () => {
           Drive innovation with leading IT and industrial engineering expertise
         </h1>{" "}
         {/* */}
-        <p className="text-neutral-200 max-w-lg mx-auto my-4 md:my-8 text-sm md:text-base">
+        <p className="text-neutral-200 max-w-lg mx-auto my-4 md:my-8 text-sm md:text-base hidden md:block">
           Welcome to our company, where we specialize in providing cutting-edge
           IT and industrial engineering solution to drive innovation in your
           bussiness.
         </p>
+        <div className="flex flex-col justify-center items-center mt-3">
+          <Link to="Contact" duration={500} smooth={true}>
+            <Button
+              borderRadius="1.75rem"
+              className="bg-white dark:bg-slate-900 text-black dark:text-white border-neutral-200 dark:border-slate-800 w-auto text-xl"
+            >
+              Contact Us
+            </Button>
+          </Link>
+        </div>
       </div>
     </div>
   );
