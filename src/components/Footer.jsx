@@ -19,8 +19,7 @@ const Footer = () => {
             OC<span className="text-gray-400">tech</span>
           </h1>
           <p className="text-sm text-gray-300">
-            Lorem ipsum dolor sit amet consectetur. Suspendisse dictumst turpis
-            consequat libero eget turpis at mauris integer.
+          Transforming Businesses Through Innovative Web Design, Development, and Software Services.
           </p>
           <div className="flex gap-3 mt-8">
             <Image
@@ -73,11 +72,11 @@ const Footer = () => {
               </li>
               <li className="flex gap-2 items-center">
                 <FaPhoneAlt size={20} className="text-gray-400" />
-                0208 993 4500
+                02089934500
               </li>
               <li className="flex gap-2 items-center">
                 <MdEmail size={25} className="text-gray-400" />
-                info@steiner.io
+                info@octech.com
               </li>
             </ul>
           </div>
@@ -106,7 +105,7 @@ const Footer = () => {
       <hr className="my-6 border-gray-700" />
       <div className="flex flex-col gap-5 md:flex-row justify-between items-center">
         <p className="text-sm">
-          OCtech Made with ❤️ in India | Copyright © 2024,
+          OCtech Made with ❤️ in India | Copyright © 2024
         </p>
         <div className="flex space-x-4">
           <a href="#facebook" className="text-gray-400 hover:text-gray-300">
