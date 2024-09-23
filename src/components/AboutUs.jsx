@@ -23,11 +23,10 @@ const AboutUs = () => {
       <div className="lg:w-1/2 w-full">
         <h4 className="text-black font-bold text-lg mb-2">About US</h4>
         <h2 className="text-4xl font-bold text-gray-900 mb-6 leading-snug">
-          We are Working world With 15+ Years
+          We are Working world With 5+ Years
         </h2>
         <p className="text-gray-600 mb-8">
-          Duis leo. Sed fringilla mauris siamet nibh. odales sagittis magna. Sed
-          consequat
+          helps you to keep up with current technologies.
         </p>
 
         {/* Bullet Points */}
@@ -38,15 +37,15 @@ const AboutUs = () => {
           </div>
           <div className="flex items-center">
             <span className="bg-slate-800 text-white rounded-full h-3 w-3 mr-2"></span>
-            Client happiness
+            Latest Technology
           </div>
           <div className="flex items-center">
             <span className="bg-slate-800 text-white rounded-full h-3 w-3 mr-2"></span>
-            World-class service
+            Beautiful Products Design
           </div>
           <div className="flex items-center">
             <span className="bg-slate-800 text-white rounded-full h-3 w-3 mr-2"></span>
-            World-class service
+            Better User Experience.
           </div>
         </div>
       </div>

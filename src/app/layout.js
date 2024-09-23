@@ -13,7 +13,7 @@ const geistMono = localFont({
 });
 
 export const metadata = {
-  title: "ProjectY",
+  title: "OCtech",
   description: "We will rock you!",
 };
 

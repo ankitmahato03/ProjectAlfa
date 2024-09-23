@@ -4,22 +4,22 @@ const Workflow = () => {
   const steps = [
     {
       title: "Planning & Strategy",
-      description: "Vestibulum ante ipsumusn eratul-trices posu world",
+      description: "We will discuss with the client and understand the requirement, business model, new features, and solve client queries.",
       icon: "📐", // Replace with an appropriate icon
     },
     {
       title: "Project Design",
-      description: "Vestibulum ante ipsumusn eratul-trices posu world",
+      description: "Our experts come up with all kinds of design idea and layouts and share with a client. as per the client suggestion make new layouts.",
       icon: "📊", // Replace with an appropriate icon
     },
     {
       title: "Execute & Testing",
-      description: "Vestibulum ante ipsumusn eratul-trices posu world",
+      description: "After agreeing on the design and plans, we will conduct a development process with suitable technology.",
       icon: "⚙️", // Replace with an appropriate icon
     },
     {
       title: "Deliver result",
-      description: "Vestibulum ante ipsumusn eratul-trices posu world",
+      description: "Once development is complete after that our team test everything and Go Live in the client domain.",
       icon: "📋", // Replace with an appropriate icon
     },
   ];
