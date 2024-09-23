@@ -7,21 +7,20 @@ const Contact = () => {
       className="px-10 lg:px-32 py-20 bg-gray-100 dark:bg-gray-900"
     >
       <div className="container mx-auto">
-        <div className="flex flex-wrap justify-between">
-          <div className="w-full md:w-1/3 mb-8 md:mb-0">
-          <h3 className="text-neutral-950 dark:text-neutral-100 font-bold text-2xl sm:text-3xl md:text-4xl mb-4">
+      <h3 className="text-neutral-950 dark:text-neutral-100 font-bold text-2xl sm:text-3xl md:text-4xl mb-4">
           Contact Us
         </h3>
+        <div className="flex flex-wrap justify-between">
+          <div className="w-full md:w-1/3 mb-8 md:mb-0">
             <h1 className="text-3xl font-bold text-black dark:text-white mb-6">
             To make requests for
-further information,
-contact us via our social channels.
+            further information,
+            contact us via our social channels.
             </h1>
             <p className="flex items-center mb-4 text-black dark:text-gray-200">
-              <i className="fas fa-envelope text-black dark:text-white text-lg mr-2"></i>
-             
-We need a couple of hours!
-No more than 2 working days since receiving your issue ticket.
+              <i className="fas fa-envelope text-black dark:text-white text-lg mr-2"></i>          
+                We need a couple of hours!
+                No more than 2 working days since receiving your issue ticket.
             </p>
             <p className="flex items-center mb-4 text-black dark:text-gray-200">
               <i className="fas fa-envelope text-black dark:text-white text-lg mr-2"></i>
