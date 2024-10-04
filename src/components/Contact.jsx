@@ -1,47 +1,42 @@
-"use client"; // To mark this component as a Client Component
-
-import React, { useRef } from "react";
+"use client";
+import { Loader2, Mail, Phone } from "lucide-react";
+import React from "react";
+import { useForm } from "react-hook-form";
+import toast from "react-hot-toast";
 
 const Contact = () => {
-  const formRef = useRef(null);
+  const {
+    register,
+    handleSubmit,
+    formState: { errors, isSubmitting },
+    reset,
+  } = useForm({
+    defaultValues: {
+      name: "",
+      email: "",
+      message: "",
+    },
+  });
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    const scriptURL =
-      "https://script.google.com/macros/s/AKfycbx3y_EUJGP6MFF83thU6PSHT-WteFqcrY3_ddbOSSBwjgzosRFD9oNP5cPC3Zkrwv_p/exec";
-
-    // Create a new FormData object to include the form fields and current date
-    const formData = new FormData(formRef.current);
-    const currentDate = new Date().toLocaleString(); // Get the current date and time as a string
-    formData.append("Date", currentDate); // Append the date to the form data
-
-    fetch(scriptURL, { method: "POST", body: formData })
-      .then((response) => {
-        console.log("Success!", response);
-        const messageElement = document.getElementById("msg");
-        messageElement.textContent = "Form submitted successfully!";
-        messageElement.style.color = "green";
-
-        // Clear the form after successful submission
-        formRef.current.reset();
-
-        // Hide the message after 5 seconds
-        setTimeout(() => {
-          messageElement.textContent = "";
-        }, 5000);
-      })
-      .catch((error) => {
-        console.error("Error!", error.message);
-        const messageElement = document.getElementById("msg");
-        messageElement.textContent = "Form submission failed!";
-
-        // Hide the error message after 5 seconds
-        setTimeout(() => {
-          messageElement.textContent = "";
-        }, 5000);
-      });
+  const onSubmit = async (data) => {
+    const scriptURL = process.env.NEXT_PUBLIC_GOOGLE_SHEET_URL;
+    const formDataWithDate = {
+      ...data,
+      date: new Date().toLocaleString(),
+    };
+    const response = await fetch(scriptURL, {
+      method: "POST",
+      body: JSON.stringify(formDataWithDate),
+    });
+    if (response.ok) {
+      toast.success("Form submitted successfully!");
+      reset();
+    } else {
+      console.error("Error!", response);
+      toast.error("Form submission failed!");
+    }
   };
-
+  
   return (
     <div
       id="Contact"
@@ -68,50 +63,105 @@ const Contact = () => {
               receiving your issue ticket.
             </p>
             <p className="flex items-center mb-2 text-black dark:text-gray-200">
-              <i className="fas fa-envelope text-black dark:text-white text-lg mr-2"></i>
-              help@gmail.com
+              <Mail className="h-4 w-4 mr-2"/> help@gmail.com
             </p>
             <p className="flex items-center mb-2 text-black dark:text-gray-200">
-              <i className="fas fa-phone-square-alt text-black dark:text-white text-lg mr-2"></i>
-              8016525211
+              <Phone className="h-4 w-4 mr-2"/> 8016525211
             </p>
           </div>
 
           <div className="w-full md:w-2/3">
             <form
-              ref={formRef}
-              onSubmit={handleSubmit}
-              name="submit-to-google-sheet"
+              onSubmit={handleSubmit(onSubmit)}
               className="w-full bg-white dark:bg-gray-800 p-8 rounded-md shadow-md"
             >
               <input
                 type="text"
-                name="Name"
-                placeholder="Your Name"
-                required
-                className="w-full px-4 py-3 border border-gray-300 dark:border-gray-700 rounded-md mb-4 focus:outline-none focus:ring-2 focus:ring-black dark:focus:ring-white"
+                placeholder="Enter your name"
+                {...register("name", {
+                  required: "Name is Required",
+                  maxLength: {
+                    value: 20,
+                    message: "Name cannot exceed 20 characters",
+                  },
+                })}
+                className={`w-full px-4 py-3 border ${
+                  errors.name
+                    ? "border-red-500"
+                    : "border-gray-300 dark:border-gray-700"
+                } rounded-md mb-4 focus:outline-none focus:ring-2 ${
+                  errors.name
+                    ? "focus:ring-red-500"
+                    : "focus:ring-black dark:focus:ring-white"
+                }`}
               />
+              {errors.name && (
+                <p className="text-red-500 text-sm mb-2">
+                  {errors.name.message}
+                </p>
+              )}
               <input
                 type="email"
-                name="Email"
-                placeholder="Your Email"
-                required
-                className="w-full px-4 py-3 border border-gray-300 dark:border-gray-700 rounded-md mb-4 focus:outline-none focus:ring-2 focus:ring-black dark:focus:ring-white"
+                placeholder="Enter your email"
+                {...register("email", {
+                  required: true,
+                  pattern: {
+                    value: /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
+                    message: "Invalid Email Address",
+                  },
+                })}
+                className={`w-full px-4 py-3 border ${
+                  errors.email
+                    ? "border-red-500"
+                    : "border-gray-300 dark:border-gray-700"
+                } rounded-md mb-4 focus:outline-none focus:ring-2 ${
+                  errors.email
+                    ? "focus:ring-red-500"
+                    : "focus:ring-black dark:focus:ring-white"
+                }`}
               />
+              {errors.email && (
+                <p className="text-red-500 text-sm mb-2">
+                  {errors.email.message}
+                </p>
+              )}
               <textarea
-                name="Message"
                 rows="5"
                 placeholder="Your Message"
-                className="w-full px-4 py-3 border border-gray-300 dark:border-gray-700 rounded-md mb-4 focus:outline-none focus:ring-2 focus:ring-black dark:focus:ring-white"
+                {...register("message", {
+                  required: "Message is required",
+                  maxLength: {
+                    value: 100,
+                    message: "Message should not exceed 100 characters",
+                  },
+                })}
+                className={`w-full px-4 py-3 border ${
+                  errors.message
+                    ? "border-red-500"
+                    : "border-gray-300 dark:border-gray-700"
+                } rounded-md mb-4 focus:outline-none focus:ring-2 ${
+                  errors.message
+                    ? "focus:ring-red-500"
+                    : "focus:ring-black dark:focus:ring-white"
+                }`}
               ></textarea>
+              {errors.message && (
+                <p className="text-red-500 text-sm mb-2">
+                  {errors.message.message}
+                </p>
+              )}
               <button
                 type="submit"
-                className="w-full py-3 bg-black text-white rounded-md hover:bg-gray-800 dark:hover:bg-gray-600 focus:outline-none focus:ring-2 focus:ring-black dark:focus:ring-white"
+                className="w-full py-3 bg-black text-white rounded-md flex justify-center items-center hover:bg-gray-800 dark:hover:bg-gray-600 focus:outline-none focus:ring-2 focus:ring-black dark:focus:ring-white"
+                disabled={isSubmitting}
               >
-                Submit
+                {isSubmitting ? (
+                  <Loader2 className="w-4 h-4 animate-spin text-center" />
+                ) : (
+                  "Submit"
+                )}
               </button>
             </form>
-            <span id="msg"></span> {/* Message element */}
           </div>
         </div>
       </div>
