@@ -33,7 +33,7 @@ const Workflow = () => {
       </div>
       <div className="flex flex-col md:flex-row justify-between items-center gap-8 max-w-5xl mx-auto">
         {steps.map((step, index) => (
-          <div key={index} className="flex flex-col items-center">
+          <div key={index} className="flex flex-col items-center p-8">
             <div className="bg-black text-white p-4 rounded-full text-3xl mb-4">
               {step.icon}
             </div>
