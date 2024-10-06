@@ -17,7 +17,7 @@ const OurExpertise = () => {
           homeowners, and agents.
         </p>
       </div>
-      <BentoGrid className="w-full max-w-4xl grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8">
+      <BentoGrid className="w-full max-w-4xl grid grid-cols-1 px-10 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8">
         {itemsData.items.map((item, index) => (
           <BentoGridItem
             key={index}
