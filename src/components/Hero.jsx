@@ -56,16 +56,17 @@ const Hero = () => {
         </CarouselContent>
       </Carousel>
 
-      <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-20 px-4 text-center">
-        <h1 className="text-2xl md:text-5xl text-white font-sans font-bold">
+      <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-20 px-4 text-center w-full">
+        <h1 className="text-3xl md:text-5xl text-white font-sans font-bold text-center w-full md:w-10/12 lg:w-8/12 px-4 md:px-0">
           Drive innovation with leading IT and industrial engineering expertise
-        </h1>{" "}
-        {/* */}
-        <p className="text-neutral-200 max-w-lg mx-auto my-4 md:my-8 text-sm md:text-base hidden md:block">
+        </h1>
+
+        <p className="text-neutral-200 w-full md:w-10/12 lg:w-8/12 px-4 md:px-0 mx-auto my-4 md:my-8 text-sm md:text-lg">
           Welcome to our company, where we specialize in providing cutting-edge
-          IT and industrial engineering solution to drive innovation in your
-          bussiness.
+          IT and industrial engineering solutions to drive innovation in your
+          business.
         </p>
+
         <div className="flex flex-col justify-center items-center mt-3">
           <Link to="Contact" duration={500} smooth={true}>
             <Button

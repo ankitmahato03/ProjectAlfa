@@ -4,7 +4,6 @@ import React, { useState } from "react";
 import toast from "react-hot-toast";
 
 const Contact = () => {
-
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [formData, setFormData] = useState({
     Name: "",
@@ -29,14 +28,16 @@ const Contact = () => {
       formDataObj.append("Email", formData.Email);
       formDataObj.append("Message", formData.Message);
       formDataObj.append("Date", new Date().toLocaleString());
-      
+
       const response = await fetch(scriptURL, {
         method: "POST",
         body: formDataObj,
       });
-      
-      if(response.ok === true) {
-        toast.success("Form submitted successfully!");
+
+      if (response.ok === true) {
+        toast.success(
+          "Your request has been received. We'll get back to you soon!"
+        );
         setFormData({
           Name: "",
           Email: "",
