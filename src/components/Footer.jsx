@@ -8,18 +8,25 @@ import {
 } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 import Image from "next/image";
+import {
+  Modal,
+  ModalBody,
+  ModalContent,
+  ModalTrigger,
+} from "./ui/animated-modal";
 
 const Footer = () => {
   return (
-    <footer className="bg-black text-white py-8 px-6">
-      <div className="mx-auto md:ml-20 md:mr-20 grid grid-cols-1 md:grid-cols-3 gap-8">
+    <footer className="bg-black text-white py-10 px-6">
+      <div className="mx-auto max-w-7xl grid grid-cols-1 md:grid-cols-3 gap-12">
         {/* Company Information */}
         <div>
-          <h1 className="text-2xl font-bold font-mono mb-4">
-            OC<span className="text-gray-400">tech</span>
+          <h1 className="text-3xl font-bold font-mono mb-4">
+            OC<span className="text-teal-400">tech</span>
           </h1>
           <p className="text-sm text-gray-300">
-          Transforming Businesses Through Innovative Web Design, Development, and Software Services.
+            Transforming Businesses Through Innovative Web Design, Development,
+            and Software Services.
           </p>
           <div className="flex gap-3 mt-8">
             <Image
@@ -39,24 +46,93 @@ const Footer = () => {
           </div>
         </div>
 
-        {/* Useful Links */}
+        {/* Useful Modals */}
         <div>
-          <h3 className="mb-2 font-bold text-gray-400">Useful Links</h3>
-          <ul className="space-y-2 text-gray-200 text-sm">
+          <h3 className="mb-4 font-bold text-gray-400 text-xl">Useful Links</h3>
+          <ul className="space-y-3 text-sm">
             <li>
-              <a href="#" className="hover:text-gray-400">
-                About Us
-              </a>
+              <Modal>
+                <ModalTrigger className="cursor-pointer text-white hover:text-teal-500">
+                  About Us
+                </ModalTrigger>
+                <ModalBody>
+                  <ModalContent>
+                    <div className="p-6 bg-white text-black rounded-lg">
+                      <h2 className="text-2xl font-bold mb-4">About Us</h2>
+                      <p className="text-black text-lg">
+                        OCtech is a leading software development company that
+                        offers top-rated Software Development Services due to
+                        our vast experience, team of skilled professionals, key
+                        business insights, and a dedicated working process.
+                      </p>
+                    </div>
+                  </ModalContent>
+                </ModalBody>
+              </Modal>
             </li>
             <li>
-              <a href="#" className="hover:text-gray-400">
-                Terms & Conditions
-              </a>
+              <Modal>
+                <ModalTrigger className="cursor-pointer text-white hover:text-teal-400">
+                  Terms & Conditions
+                </ModalTrigger>
+                <ModalBody>
+                  <ModalContent>
+                    <div className="p-6 bg-white text-black rounded-lg overflow-y-auto max-h-[80vh]">
+                      <h2 className="text-2xl font-bold mb-4">
+                        Terms & Conditions
+                      </h2>
+                      <p className=" text-lg">
+                        OCtech is a leading software development company that
+                        offers top-rated Software Development Services due to
+                        our vast experience, team of skilled professionals, key
+                        business insights, and a dedicated working process.
+                        OCtech is a leading software development company that
+                        offers top-rated Software Development Services due to
+                        our vast experience, team of skilled professionals, key
+                        business insights, and a dedicated working process.
+                        OCtech is a leading software development company that
+                        offers top-rated Software Development Services due to
+                        our vast experience, team of skilled professionals, key
+                        business insights, and a dedicated working process.
+                        OCtech is a leading software development company that
+                        offers top-rated Software Development Services due to
+                        our vast experience, team of skilled professionals, key
+                        business insights, and a dedicated working process.
+                        OCtech is a leading software development company that
+                        offers top-rated Software Development Services due to
+                        our vast experience, team of skilled professionals, key
+                        business insights, and a dedicated working process.
+                        OCtech is a leading software development company that
+                        offers top-rated Software Development Services due to
+                        our vast experience, team of skilled professionals, key
+                        business insights, and a dedicated working process.
+                      </p>
+                    </div>
+                  </ModalContent>
+                </ModalBody>
+              </Modal>
             </li>
             <li>
-              <a href="#" className="hover:text-gray-400">
-                Privacy Policy
-              </a>
+              <Modal>
+                <ModalTrigger className="hover:text-teal-500 text-white cursor-pointer">
+                  Privacy Policy
+                </ModalTrigger>
+                <ModalBody>
+                  <ModalContent>
+                    <div className="p-6 bg-white rounded-lg text-black">
+                      <h2 className="text-2xl font-bold mb-4">
+                        Privacy Policy
+                      </h2>
+                      <p className="text-black text-lg">
+                        OCtech is a leading software development company that
+                        offers top-rated Software Development Services due to
+                        our vast experience, team of skilled professionals, key
+                        business insights, and a dedicated working process.
+                      </p>
+                    </div>
+                  </ModalContent>
+                </ModalBody>
+              </Modal>
             </li>
           </ul>
         </div>
@@ -64,10 +140,10 @@ const Footer = () => {
         {/* Contact Information & Newsletter */}
         <div>
           <div className="mb-4">
-            <h3 className="mb-2 font-bold text-gray-400">Get In Touch</h3>
-            <ul className="space-y-2 text-gray-200 text-sm">
+            <h3 className="mb-4 font-bold text-xl text-gray-400">Get In Touch</h3>
+            <ul className="space-y-3 text-gray-200 text-sm">
               <li className="flex gap-2 items-center">
-                <MdLocationOn size={25} className="text-gray-400" />
+                <MdLocationOn size={20} className="text-gray-400" />
                 India, Kol Street 78, India
               </li>
               <li className="flex gap-2 items-center">
@@ -75,14 +151,14 @@ const Footer = () => {
                 02089934500
               </li>
               <li className="flex gap-2 items-center">
-                <MdEmail size={25} className="text-gray-400" />
+                <MdEmail size={20} className="text-gray-400" />
                 info@octech.com
               </li>
             </ul>
           </div>
           {/* Newsletter Form */}
-          <div className="container text-white">
-            <h2 className="font-bold mb-2 text-gray-400">Newsletter</h2>
+          <div className="container text-white mt-6">
+            <h2 className="text-xl font-bold mb-2 text-gray-400">Newsletter</h2>
             <p className="text-sm mb-4">Get the latest update</p>
             <form className="flex overflow-hidden rounded-full relative">
               <input
