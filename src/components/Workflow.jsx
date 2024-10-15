@@ -31,14 +31,14 @@ const Workflow = () => {
       <div className="text-center mb-10 py-5 max-w-xl mx-auto">
         <p className="text-3xl italic mb-2">“Keep it simple, stupid (KISS)”</p>
       </div>
-      <div className="flex flex-col md:flex-row justify-between items-center gap-8 max-w-5xl mx-auto">
+      <div className="flex flex-col md:flex-row justify-between items-center gap-14 max-w-6xl mx-auto p-8">
         {steps.map((step, index) => (
-          <div key={index} className="flex flex-col items-center p-8">
+          <div key={index} className="flex flex-col items-center">
             <div className="bg-black text-white p-4 rounded-full text-3xl mb-4">
               {step.icon}
             </div>
             <h4 className="font-bold text-lg mb-2">{step.title}</h4>
-            <p className="text-gray-500 text-sm">{step.description}</p>
+            <p className="text-gray-500 text-sm w-full">{step.description}</p>
           </div>
         ))}
       </div>
