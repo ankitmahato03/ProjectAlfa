@@ -4,7 +4,6 @@ import React from "react";
 const AboutUs = () => {
   return (
     <div
-      id="About"
       className="flex flex-col lg:flex-row items-center justify-between bg-white py-16 px-6 lg:px-20 gap-8"
     >
       {/* Left Side Image */}
@@ -21,12 +20,13 @@ const AboutUs = () => {
 
       {/* Right Side Content */}
       <div className="lg:w-1/2 w-full">
-        <h4 className="text-black font-bold text-lg mb-2">About US</h4>
-        <h2 className="text-4xl font-bold text-gray-900 mb-6 leading-snug">
-          We are Working world With 5+ Years
+        <h2 className="text-4xl font-bold text-gray-900 mb-3 leading-snug">
+          We turn disruptions into competitive advantages for you.
         </h2>
-        <p className="text-gray-600 mb-8">
-          helps you to keep up with current technologies.
+        <p className="text-gray-600 mb-5">
+          We carve out new possibilities every day. Where technology and human
+          ingenuity converge to usher in new frontiers of
+          innovation and relevance.
         </p>
 
         {/* Bullet Points */}

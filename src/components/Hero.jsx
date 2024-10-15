@@ -28,7 +28,7 @@ const data = [
 
 const Hero = () => {
   return (
-    <div id="Home" className="w-full h-screen">
+    <div id="Home" className="w-full">
       <Carousel
         className="w-full"
         plugins={[
@@ -39,7 +39,7 @@ const Hero = () => {
       >
         <CarouselContent>
           {data.map((item) => (
-            <CarouselItem key={item.id} className="relative w-full h-screen">
+            <CarouselItem key={item.id} className="relative w-full h-[70vh] md:h-screen">
               <div className="relative w-full h-full">
                 <Image
                   src={item.img}
@@ -56,7 +56,7 @@ const Hero = () => {
         </CarouselContent>
       </Carousel>
 
-      <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-20 px-4 text-center">
+      <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-20 px-4 text-center w-full md:w-[768px]">
         <h1 className="text-2xl md:text-5xl text-white font-sans font-bold">
           Drive innovation with leading IT and industrial engineering expertise
         </h1>{" "}

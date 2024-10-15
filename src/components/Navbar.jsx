@@ -50,7 +50,7 @@ const Navbar = () => {
               to={item.link}
               smooth={true}
               duration={500}
-              className="hover:text-teal-400 transition-colors duration-300 cursor-pointer"
+              className="hover:text-teal-400 transition-colors duration-300 cursor-pointer text-lg font-[450]"
             >
               {item.name}
             </A>
