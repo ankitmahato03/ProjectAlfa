@@ -26,6 +26,12 @@ const Footer = () => {
   const handleNewsLetter = async (e) => {
     e.preventDefault();
     setLoading(true);
+    const emailRegex = /^[\w\.-]+@[a-zA-Z\d\.-]+\.[a-zA-Z]{2,6}$/;
+    if(!emailRegex.test(emailData)) {
+      toast.error("Invalid email address!");
+      setLoading(false);
+      return;
+    }
     try {
       const sheetURL = process.env.NEXT_PUBLIC_GOOGLE_SHEET_URL_NEWSLETTER;
       console.log("Sheet URL", sheetURL);
