@@ -28,6 +28,8 @@ const Footer = () => {
     setLoading(true);
     try {
       const sheetURL = process.env.NEXT_PUBLIC_GOOGLE_SHEET_URL_NEWSLETTER;
+      console.log("Sheet URL", sheetURL);
+      
       const formData = new FormData();
       formData.append("Email", emailData);
       formData.append("Date", new Date().toLocaleString());
@@ -36,6 +38,7 @@ const Footer = () => {
         method: "POST",
         body: formData,
       });
+      console.log("Response", response);
 
       if (response.ok === true) {
         toast.success("Subscribed to newsletter successfully!");
